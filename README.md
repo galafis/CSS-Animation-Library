@@ -219,3 +219,23 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 **🚀 Desenvolvido com ❤️ por Gabriel Demetrios Lafis**
 
 </div>
+
+
+## 📋 Descrição
+
+Descreva aqui o conteúdo desta seção.
+
+
+## 📦 Instalação
+
+Descreva aqui o conteúdo desta seção.
+
+
+## 💻 Uso
+
+Descreva aqui o conteúdo desta seção.
+
+
+## 📄 Licença
+
+Descreva aqui o conteúdo desta seção.
