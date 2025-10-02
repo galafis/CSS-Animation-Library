@@ -122,6 +122,8 @@ Each animation has a corresponding CSS class. To apply an animation, add the cla
 
 ### 🏗️ Project Structure
 
+![Architecture Diagram](assets/architecture_diagram.png)
+
 ```
 CSS-Animation-Library/
 ├── assets/                 # Imagens, ícones e outros recursos visuais

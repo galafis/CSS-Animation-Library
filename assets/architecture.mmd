@@ -1,0 +1,19 @@
+graph TD
+    A[Usuário] --> B(Navegador Web)
+    B --> C{Carrega index.html}
+    C --> D[styles.css]
+    C --> E[src/js/script.js]
+    D --> F[Elementos HTML com Classes de Animação]
+    E --> F
+    F --> G[Animações Visíveis na Página]
+    subgraph Repositório GitHub
+        H[README.md] --> I[Documentação]
+        J[src/] --> K[Código Fonte HTML, CSS, JS]
+        L[assets/] --> M[Imagens e Diagramas]
+        N[tests/] --> O[Testes Unitários]
+        P[LICENSE] --> Q[Informações de Licença]
+    end
+    G --> H
+    K --> G
+    M --> H
+    O --> K
