@@ -1,16 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS-Animation-Library</title>
+    <title>CSS Animation Library - Gabriel Demetrios Lafis</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Advanced CSS Animation Library</h1>
-        <button class="btn">Sample Button</button>
-        <div class="author">Created by Gabriel Demetrios Lafis</div>
-    </div>
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title animate__fadeInDown">Biblioteca de Animações CSS</h1>
+            <p class="hero-subtitle animate__fadeInUp">Animações modernas e responsivas para seus projetos web</p>
+            <div class="hero-buttons">
+                <a href="#animations" class="btn btn-primary animate__zoomIn">Ver Animações</a>
+                <a href="https://github.com/galafis/CSS-Animation-Library" target="_blank" class="btn btn-secondary animate__zoomIn">GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="animations" class="animations-showcase">
+        <div class="container">
+            <h2 class="section-title">Explore Nossas Animações</h2>
+            <div class="animation-grid">
+                <!-- Exemplo de Animação 1: Fade In -->
+                <div class="animation-card animate__fadeIn">
+                    <h3>Fade In</h3>
+                    <div class="animation-box fade-in"></div>
+                    <button class="btn btn-small" onclick="applyAnimation(this, 'fade-in')">Testar</button>
+                </div>
+
+                <!-- Exemplo de Animação 2: Slide In Left -->
+                <div class="animation-card animate__slideInLeft">
+                    <h3>Slide In Left</h3>
+                    <div class="animation-box slide-in-left"></div>
+                    <button class="btn btn-small" onclick="applyAnimation(this, 'slide-in-left')">Testar</button>
+                </div>
+
+                <!-- Exemplo de Animação 3: Bounce -->
+                <div class="animation-card animate__bounce">
+                    <h3>Bounce</h3>
+                    <div class="animation-box bounce"></div>
+                    <button class="btn btn-small" onclick="applyAnimation(this, 'bounce')">Testar</button>
+                </div>
+
+                <!-- Exemplo de Animação 4: Rotate In -->
+                <div class="animation-card animate__rotateIn">
+                    <h3>Rotate In</h3>
+                    <div class="animation-box rotate-in"></div>
+                    <button class="btn btn-small" onclick="applyAnimation(this, 'rotate-in')">Testar</button>
+                </div>
+
+                <!-- Exemplo de Animação 5: Flip In X -->
+                <div class="animation-card animate__flipInX">
+                    <h3>Flip In X</h3>
+                    <div class="animation-box flip-in-x"></div>
+                    <button class="btn btn-small" onclick="applyAnimation(this, 'flip-in-x')">Testar</button>
+                </div>
+
+                <!-- Exemplo de Animação 6: Zoom In -->
+                <div class="animation-card animate__zoomIn">
+                    <h3>Zoom In</h3>
+                    <div class="animation-box zoom-in"></div>
+                    <button class="btn btn-small" onclick="applyAnimation(this, 'zoom-in')">Testar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 CSS Animation Library. Desenvolvido com ❤️ por Gabriel Demetrios Lafis.</p>
+            <div class="social-links">
+                <a href="https://github.com/galafis" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/gabriel-lafis" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function applyAnimation(button, animationClass) {
+            const box = button.previousElementSibling;
+            box.classList.remove(animationClass);
+            // Força o reflow para reiniciar a animação
+            void box.offsetWidth;
+            box.classList.add(animationClass);
+        }
+    </script>
 </body>
 </html>
+
