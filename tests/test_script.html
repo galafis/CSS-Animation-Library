@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Unit Tests</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .test-box {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            margin: 10px;
+            display: inline-block;
+        }
+        .test-result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Unit Tests for applyAnimation</h1>
+
+    <div id="testContainer">
+        <div class="test-box" id="box1"></div>
+        <button id="button1" onclick="applyAnimation(this, 'fade-in')">Test Fade In</button>
+
+        <div class="test-box" id="box2"></div>
+        <button id="button2" onclick="applyAnimation(this, 'slide-in-left')">Test Slide In Left</button>
+    </div>
+
+    <div class="test-result" id="result"></div>
+
+    <script src="../src/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const box1 = document.getElementById('box1');
+            const button1 = document.getElementById('button1');
+            const box2 = document.getElementById('box2');
+            const button2 = document.getElementById('button2');
+            const resultDiv = document.getElementById('result');
+
+            let testsPassed = 0;
+            let totalTests = 0;
+
+            function runTest(testName, element, button, expectedClass) {
+                totalTests++;
+                button.click();
+                setTimeout(() => {
+                    if (element.classList.contains(expectedClass)) {
+                        console.log(`${testName}: PASSED`);
+                        testsPassed++;
+                    } else {
+                        console.error(`${testName}: FAILED - Expected class ${expectedClass} not found.`);
+                    }
+                    if (totalTests === 2) {
+                        resultDiv.textContent = `Tests completed: ${testsPassed} of ${totalTests} passed.`;
+                        if (testsPassed === totalTests) {
+                            resultDiv.style.color = 'green';
+                        } else {
+                            resultDiv.style.color = 'red';
+                        }
+                    }
+                }, 100); // Pequeno atraso para a animação ser aplicada
+            }
+
+            runTest('Fade In Animation', box1, button1, 'fade-in');
+            runTest('Slide In Left Animation', box2, button2, 'slide-in-left');
+        });
+    </script>
+</body>
+</html>
+
