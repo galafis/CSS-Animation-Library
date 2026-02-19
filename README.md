@@ -122,6 +122,36 @@ Each animation has a corresponding CSS class. To apply an animation, add the cla
 
 ### 🏗️ Project Structure
 
+```mermaid
+graph TD
+    A[Animation Library] --> B[Animation Categories]
+    B --> B1[Entrance & Exit]
+    B --> B2[Hover & Focus]
+    B --> B3[Loading Spinners]
+    B --> B4[Transforms]
+    B1 --> C[Keyframe Definitions]
+    B2 --> C
+    B3 --> C
+    B4 --> C
+    C --> D1[@keyframes fadeIn]
+    C --> D2[@keyframes bounceIn]
+    C --> D3[@keyframes spin]
+    C --> D4[@keyframes pulse]
+    D1 --> E[CSS Transitions]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+    E --> F1[duration]
+    E --> F2[timing-function]
+    E --> F3[delay]
+    F1 --> G[Compiled CSS Output]
+    F2 --> G
+    F3 --> G
+    G --> H[animate__fadeIn]
+    G --> H2[animate__bounceIn]
+    G --> H3[animate__zoomIn]
+```
+
 ![Architecture Diagram](assets/architecture_diagram.png)
 
 ```
