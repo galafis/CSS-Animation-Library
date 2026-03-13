@@ -6,6 +6,7 @@
 ![HTML5](https://img.shields.io/badge/HTML5-Latest-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![Sass](https://img.shields.io/badge/Sass-1.60+-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg?logo=docker)](Dockerfile)
 ![Version](https://img.shields.io/badge/Version-1.0.0-green.svg?style=for-the-badge)
 
 **Advanced CSS Animation Library**
